@@ -1,13 +1,69 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/build.css">
-    <title>Accessibility Project</title>
-</head>
-<body>
-    <h1>hello world</h1>
-    <script src="js/index.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/build.css">
+        <title>Accessibility Project</title>
+    </head>
+
+    <body>
+
+        <nav>
+            <div><img src="img/logo.png" alt=""></div>
+        </nav>
+
+        <section class="main-page">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="edt.html">Emploi du temps</a></li>
+                    <li class="dropdown">
+                        <p>Profil</p>
+                        <ul class="dropdown-content">
+                            <li><a href="#">Contrat</a></li>
+                            <li><a href="#">Fiche de paie</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <p>Plan</p>
+                        <ul class="dropdown-content">
+                            <li><a href="#">Produit 1</a></li>
+                            <li><a href="#">Produit 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <p>Accessibilité</p>
+                        <ul class="dropdown-content">
+                            <li><a href="#">Informations</a></li>
+                         </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <div class="banner"> Actualités</div>
+
+                <div class="wrapper">
+                    <div class="slider">
+                        <img id="img-1" src="img/img1.jpg" alt="Image 1"/>
+                        <img id="img-2" src="img/img2.jpg" alt="Image 2"/>
+                        <img id="img-3" src="img/img3.jpg" alt="Image 3"/>
+                    </div>
+                    <div class="navigation-button">
+                        <span class="dot active" onclick="changeSlide(0)"></span>
+                        <span class="dot" onclick="changeSlide(1)"></span>
+                        <span class="dot" onclick="changeSlide(2)"></span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>©2022 SCIENCES PO</p>
+        </footer>
+
+        <script src="js/index.js"></script>
+    </body>
 </html>
