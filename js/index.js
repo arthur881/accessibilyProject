@@ -1,11 +1,11 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const dropdown = document.querySelector('.dropdown');
-  const dropdownContent = document.querySelector('.dropdown-content');
+// document.addEventListener('DOMContentLoaded', function() {
+//   const dropdown = document.querySelector('.dropdown');
+//   const dropdownContent = document.querySelector('.dropdown-content');
 
-  dropdown.for('click', function() {
-    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
-  });
-});
+//   dropdown.addEventListener('click', function() {
+//     dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+//   });
+// });
 
 var imgs = document.querySelectorAll('.slider img');
 var dots = document.querySelectorAll('.dot');

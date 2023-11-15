@@ -5,19 +5,20 @@ body {
 }
 
 nav {
-  height: 9%;
+  margin: 0;
+  padding: 0;
+  height: 10%;
   display: flex;
-  justify-items: center;
+  align-items: center; /* Ajout de cette ligne pour l'alignement vertical */
 }
-nav div {
+nav a {
   height: 100%;
-  display: flex;
-  justify-items: center;
-  justify-content: center;
+  vertical-align: middle; /* Pour centrer l'image verticalement */
 }
-nav div img {
+nav a img {
   height: 30px;
   width: auto;
+  vertical-align: middle; /* Pour centrer l'image verticalement */
 }
 
 .main-page {
@@ -30,7 +31,6 @@ nav div img {
   width: 30%;
   display: flex;
   flex-direction: column;
-  padding: 10px;
 }
 .main-page .sidebar ul {
   list-style: none;
@@ -38,29 +38,35 @@ nav div img {
   padding: 0;
 }
 .main-page .sidebar li {
-  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid #706F6F;
 }
-.main-page .sidebar a, .main-page .sidebar p {
+.main-page .sidebar li:focus {
+  background-color: #E6142D;
+}
+.main-page .sidebar a {
   text-decoration: none;
   color: #fff;
   display: block;
-  padding: 10px;
+  padding: 15px;
   transition: background-color 0.3s ease;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 900;
   text-transform: uppercase;
-  border-bottom: 1.5px solid #706F6F;
 }
 .main-page .sidebar .dropdown-content {
   display: none;
   padding-left: 20px;
   background-color: #706F6F;
 }
+.main-page .sidebar .dropdown:hover .dropdown-content {
+  display: block;
+}
 .main-page .content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding: 0 100px 50px 100px;
+  gap: 40px;
   width: 100%;
 }
 .main-page .content .banner {
@@ -68,12 +74,15 @@ nav div img {
   color: #fff;
   padding: 15px;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 900;
 }
 .main-page .content .wrapper {
   width: 100%;
   height: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .main-page .content .wrapper .slider {
   width: 100%;
@@ -110,6 +119,188 @@ nav div img {
 .main-page .content .wrapper .navigation-button .active, .main-page .content .wrapper .navigation-button .dot:hover {
   background-color: #E6142D;
   border: 2px solid #E6142D;
+}
+.main-page .content .txt-access {
+  position: relative;
+  padding: 60px 20px 20px 20px;
+  font-family: Inter;
+  font-size: 20px;
+  border: 5px solid #E6142D;
+  border-radius: 25px;
+}
+.main-page .content .txt-access .rectangle-deco {
+  position: absolute;
+  border-radius: 20px 20px 0 0;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 100%;
+  background-color: #E6142D;
+}
+.main-page .content .txt-access span {
+  font-size: 24px;
+  font-weight: 600;
+}
+.main-page .content .carte-campus {
+  width: 100%;
+  height: 80%;
+}
+.main-page .content .carte-campus img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top: 10px solid #E6142D;
+}
+.main-page .content .contrat {
+  width: 100%;
+  height: 80%;
+}
+.main-page .content .contrat img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top: 10px solid #E6142D;
+  object-position: top;
+}
+.main-page .content .fiche-paie {
+  width: 100%;
+  height: 80%;
+}
+.main-page .content .fiche-paie img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top: 10px solid #E6142D;
+  object-position: top;
+}
+.main-page .content .profil-page {
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 2fr 3fr;
+  grid-template-areas: "pp nom contact" "contrat contrat contact" "contrat contrat contact";
+  font-family: Inter;
+  font-size: 20px;
+}
+.main-page .content .profil-page .banner2 {
+  background-color: #E6142D;
+  color: #fff;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 700;
+}
+.main-page .content .profil-page .case {
+  border: 2px solid #E6142D;
+}
+.main-page .content .profil-page .case-pp {
+  grid-area: pp;
+}
+.main-page .content .profil-page .case-nom {
+  grid-area: nom;
+}
+.main-page .content .profil-page .case-contact {
+  grid-area: contact;
+}
+.main-page .content .profil-page .case-contrat {
+  grid-area: contrat;
+}
+.main-page .content .profil-page ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main-page .content .profil-page ul li {
+  padding: 10px 0;
+}
+.main-page .content .page-edt {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.main-page .content .page-edt .header-edt {
+  display: flex;
+  justify-content: space-between;
+}
+.main-page .content .page-edt .header-edt ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  font-family: Inter;
+  font-size: 20px;
+}
+.main-page .content .page-edt .header-edt ul li {
+  padding: 5px;
+  border: 1.5px solid #706F6F;
+  border-radius: 5px;
+}
+.main-page .content .page-edt .header-edt ul .arrow {
+  height: 70%;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+.main-page .content .page-edt .header-edt ul p {
+  margin: 0;
+  width: 100%;
+}
+.main-page .content .page-edt .header-edt .calendar {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
+}
+.main-page .content .page-edt .header-edt .calendar .lundi {
+  background-color: #E6142D;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.main-page .content .page-edt .header-edt .calendar .mardi {
+  background-color: #E6142D;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.main-page .content .page-edt .header-edt .calendar .mercredi {
+  background-color: #E6142D;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.main-page .content .page-edt .header-edt .calendar .jeudi {
+  background-color: #E6142D;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.main-page .content .page-edt .header-edt .calendar .vendredi {
+  background-color: #E6142D;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.main-page .content .page-edt .header-edt .calendar .meeting1 {
+  background-color: #E6142D;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.main-page .content .page-edt .header-edt .calendar .meeting2 {
+  background-color: #E6142D;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.main-page .content .page-edt .header-edt .calendar .meeting3 {
+  background-color: #E6142D;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.main-page .content .page-edt .header-edt .calendar .meeting4 {
+  background-color: #E6142D;
+  grid-column: 1/2;
+  grid-row: 1/2;
 }
 
 footer {
