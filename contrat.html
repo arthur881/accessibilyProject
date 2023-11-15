@@ -10,9 +10,9 @@
     <body>
 
         <nav>
-            <a href="index.html">
-                <img src="img/logo.png" alt="">
-            </a>
+            <div>
+                <a href="index.html"><img src="img/logo.png" alt=""></a>
+            </div>
         </nav>
 
         <section class="main-page">
@@ -22,7 +22,7 @@
                     <li><a href="edt.html">Emploi du temps</a></li>
                     <li class="dropdown">
                         <a href="profil.html">Profil</a>
-                        <ul class="dropdown-content">
+                        <ul class="dropdown-content open">
                             <li class="active"><a href="contrat.html">Contrat</a></li>
                             <li><a href="fichePaie.html">Fiche de paie</a></li>
                         </ul>
@@ -35,6 +35,14 @@
                         </ul>
                     </li>
                     <li><a href="access.html">Accessibilité</a></li>
+                    <li class="search">
+                        <form action="">
+                           <input type="text" placeholder="Recherche" required>
+                           <button type="submit">
+                              <img src="img/search.png" alt="">
+                           </button>
+                        </form>
+                     </li>
                 </ul>
             </div>
 
