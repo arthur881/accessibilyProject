@@ -1,4 +1,4 @@
-# PMR PROJECT - TEAM 24
+# ACCESSIBILITY PROJECT - TEAM 24
 
 A project during the "Digital accessibility" week at IIM.
 
