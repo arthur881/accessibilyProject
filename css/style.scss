@@ -15,15 +15,15 @@ nav {
   padding: 0;
   height: 10%;
   display: flex;
-  align-items: center; /* Ajout de cette ligne pour l'alignement vertical */
+  align-items: center;
 
   a {
     height: 100%;
-    vertical-align: middle; /* Pour centrer l'image verticalement */
+    vertical-align: middle;
     img {
       height: 30px;
       width: auto;
-      vertical-align: middle; /* Pour centrer l'image verticalement */
+      vertical-align: middle;
     }
   }
 }
@@ -47,13 +47,6 @@ nav {
 
     li {
       border-bottom: 1.5px solid #706F6F;
-
-      &:focus {
-        background-color: $red;
-      }
-    }
-    .active {
-      background-color: $red;
     }
     
     a {
@@ -321,12 +314,16 @@ nav {
         font-size: 20px;
         font-family: Inter;
 
-        td, th {
+        th, td {
           border: 1px solid $grey2;
           padding: 10px;
           text-align: left;
         }
 
+        .meeting {
+          background-color: #B1D7F3;
+        }
+        
         .cours {
           height: 60px;
         }

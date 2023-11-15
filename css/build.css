@@ -9,16 +9,16 @@ nav {
   padding: 0;
   height: 10%;
   display: flex;
-  align-items: center; /* Ajout de cette ligne pour l'alignement vertical */
+  align-items: center;
 }
 nav a {
   height: 100%;
-  vertical-align: middle; /* Pour centrer l'image verticalement */
+  vertical-align: middle;
 }
 nav a img {
   height: 30px;
   width: auto;
-  vertical-align: middle; /* Pour centrer l'image verticalement */
+  vertical-align: middle;
 }
 
 .main-page {
@@ -39,12 +39,6 @@ nav a img {
 }
 .main-page .sidebar li {
   border-bottom: 1.5px solid #706F6F;
-}
-.main-page .sidebar li:focus {
-  background-color: #E6142D;
-}
-.main-page .sidebar .active {
-  background-color: #E6142D;
 }
 .main-page .sidebar a {
   text-decoration: none;
@@ -266,10 +260,13 @@ nav a img {
   font-size: 20px;
   font-family: Inter;
 }
-.main-page .content .page-edt .calendar td, .main-page .content .page-edt .calendar th {
+.main-page .content .page-edt .calendar th, .main-page .content .page-edt .calendar td {
   border: 1px solid #706F6F;
   padding: 10px;
   text-align: left;
+}
+.main-page .content .page-edt .calendar .meeting {
+  background-color: #B1D7F3;
 }
 .main-page .content .page-edt .calendar .cours {
   height: 60px;

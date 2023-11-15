@@ -23,12 +23,3 @@ function changeSlide(n) {
   imgs[currentImg].style.opacity = 1;
   dots[currentImg].className += ' active';
 }
-
-// var timer = setInterval(changeSlide, interval);
-// currentImg = (currentImg + 1) % imgs.length; // update the index number
-
-// if (n != undefined) {
-//     clearInterval(timer);
-//     timer = setInterval(changeSlide, interval);
-//     currentImg = n;
-// }
