@@ -12,6 +12,7 @@ let selectedItems;
 
 let currentIndex = 0;
 
+// Fonction for slider in homepage
 function changeSlide(n) {
   for (let i = 0; i < imgs.length; i++) { // reset
     imgs[i].style.opacity = 0;
