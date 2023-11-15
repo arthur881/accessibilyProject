@@ -16,3 +16,10 @@ Propose a digital onboarding solution inclusive and accessible for people with r
 
 - Simplify navigation
 - Implement voice navigation in an extension
+
+### Plugin
+
+How to add a plugin in your browser ?
+- Go to plugin
+- Activate "Development mode"
+- Load unpackaged extension
