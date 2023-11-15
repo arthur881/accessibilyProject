@@ -29,21 +29,22 @@ function changeSlide(n) {
 function updateSelection() {
   selectableItems.forEach((item, index) => {
     if (index === currentIndex) {
-      item.classList.add('active');
+      item.classList.add('active1');
     } else {
-      item.classList.remove('active');
+      item.classList.remove('active1');
     }
   });
 }
-function showTab(dataTabId) {
-  tabsContent.forEach((tabContent) => {
-    if (tabContent.getAttribute('data-tab') === dataTabId) {
-      tabContent.classList.add('tab-content-active');
-    } else {
-      tabContent.classList.remove('tab-content-active');
-    }
-  });
-}
+// function showTab(dataTabId) {
+//   tabsContent.forEach((tabContent) => {
+//     if (tabContent.getAttribute('data-tab') === dataTabId) {
+//       tabContent.classList.add('tab-content-active');
+//     } else {
+//       tabContent.classList.remove('tab-content-active');
+//     }
+//   });
+// }
+
 
 document.addEventListener('keydown', function(event) {
   switch (event.code) {
@@ -55,7 +56,22 @@ document.addEventListener('keydown', function(event) {
       break;
     case 'Enter': // touche pour valider la selection
       selectedItems = selectableItems[currentIndex];
-      showTab(selectedItems.getAttribute('data-tab'));
+      if (selectedItems.classList.contains('isDrop')) {
+        // let dropDownContent = document.querySelector('.dropdown-content');
+        let dropDownContent = selectedItems.nextElementSibling;
+        console.log(dropDownContent);
+        let dropDownChidld = document.querySelectorAll('.dropChild');
+        dropDownChidld.forEach((child) => {
+          child.classList.add('selectable');
+        });
+
+        selectableItems = document.querySelectorAll('.selectable');
+        dropDownContent.style.display = 'block';
+      } else {
+        window.location.href = selectedItems.href;
+      }
+      //isLiHasDropdown(selectableItems[currentIndex]);
+
       break;
   }
   updateSelection();

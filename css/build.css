@@ -4,6 +4,10 @@ body {
   height: 100vh;
 }
 
+.active1 {
+  outline: solid 2px blue;
+}
+
 nav {
   margin: 0;
   padding: 0;
