@@ -1,0 +1,23 @@
+{
+   "manifest_version": 2,
+   "name": "Sciences Po",
+   "description": "Extension pour les PMR",
+   "version": "1.0",
+
+   "browser_action": {
+      "default_icon": "img/icon.png",
+      "default_popup": "popup.html"
+   },
+
+   "icons": {
+      "128": "img/icon.png"
+   },
+
+   "content_scripts": [
+      {
+        "matches": ["file:///D:/IIM/A3/IAN/accessibilyProject/*"],
+        "js": ["build/all.js"],
+        "css": ["build/all.css"]
+      }
+    ]
+}
