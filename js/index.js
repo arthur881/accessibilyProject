@@ -48,6 +48,36 @@ function updateSelection() {
 
 
 document.addEventListener('keydown', function(event) {
+  const previousKeys = ['ArrowLeft', 'ArrowUp', 'Tab', 'A', 'KeyZ', 'KeyE', 'KeyQ', 'KeyS', 'KeyD', 'KeyW', 'KeyX', 'KeyC'];
+  const nextKeys = ['ArrowRight', 'ArrowDown', 'KeyT', 'KeyY', 'KeyU','KeyG', 'KeyH', 'KeyJ', 'KeyB', 'KeyN', 'Key,'];
+  const selectKeys = ['Enter', 'Space', 'KeyI', 'KeyO', 'KeyP', 'KeyK', 'KeyL', 'KeyM', 'Period', 'Comma', 'Semicolon'];
+  
+  if (nextKeys.includes(event.code)) {
+    currentIndex = (currentIndex + 1) % selectableItems.length;
+    console.log('next');
+  } else if (previousKeys.includes(event.code)) {
+    currentIndex = (currentIndex - 1 + selectableItems.length) % selectableItems.length;
+    console.log('previous');
+  } else if (selectKeys.includes(event.code)) {
+    // code for selection
+    selectedItems = selectableItems[currentIndex];
+      if (selectedItems.classList.contains('isDrop')) {
+        // let dropDownContent = document.querySelector('.dropdown-content');
+        let dropDownContent = selectedItems.nextElementSibling;
+        let dropDownChidld = document.querySelectorAll('.dropChild');
+        dropDownChidld.forEach((child) => {
+          child.classList.add('selectable');
+        });
+
+        selectableItems = document.querySelectorAll('.selectable');
+        dropDownContent.style.display = 'block';
+      } else {
+        window.location.href = selectedItems.href;
+      }
+    console.log('select');
+  }
+  
+  /*
   switch (event.code) {
     case 'ArrowRight': // touche pour passer à l'item suivant
       currentIndex = (currentIndex + 1) % selectableItems.length;
@@ -75,6 +105,7 @@ document.addEventListener('keydown', function(event) {
 
       break;
   }
+*/
   updateSelection();
 });
 
